@@ -1,15 +1,10 @@
-<nav class="menu">
-  <ul>
-    <li><a href="/">Home</a></li>  
-    <li><a href="/forecast">Forecast</a></li>
-    <li><a href="/favorites">Favorites</a></li>
-  </ul>
-</nav>
-
-
-  <h1>Forecast</h1>
-<% beachesResponse.forEach((spot) => { %>
-<ul>
-  <li><a href="/forecast-detail/<%= spot.spotId %>"><%= spot.spotName %></a></li>
-<% }) %> 
-</ul>
+<div>
+<h1>Forecast</h1>
+<div>
+  <% beachesResponse.forEach((spot) => { %>
+    <ul>
+      <li><a href="/forecast-detail/<%= spot.spotId %>"><%= spot.spotName %></a></li>
+    <% }) %> 
+    </ul>
+</div>
+</div>

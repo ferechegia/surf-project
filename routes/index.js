@@ -1,7 +1,11 @@
 const router = require("express").Router();
 const { send } = require("express/lib/response");
 const Beach = require('../models/Beach.model');
-const axios = require('axios')
+const User = require('../models/User.model');
+const axios = require('axios');
+const req = require("express/lib/request");
+const res = require("express/lib/response");
+
 
 /* GET home page */
 router.get("/", async (req, res, next) => {
@@ -12,7 +16,7 @@ router.get("/", async (req, res, next) => {
 
 router.get('/forecast', async (req, res, next) => {
   const beachesResponse = await Beach.find()
-  console.log(beachesResponse); 
+  // console.log(beachesResponse); 
     res.render("forecast", {beachesResponse});
   });
 
@@ -38,6 +42,31 @@ router.get('/forecast-detail/:id', async (req, res) => {
   }
 })
 
+
+router.post('/forecast-detail/:id', async(req, res) => {
+  try {
+    const {id} = req.params
+    console.log('req.session',req.session.currentUser._id)
+    const userId = req.session.currentUser._id;
+    const favoriteBeach = await Beach.findOne({spotId:id})
+    const nameBeach = favoriteBeach.spotName; 
+    const updateFavorites = await User.findByIdAndUpdate(userId,{favorites:nameBeach} )
+    res.redirect('/favorites')
+  } catch (error) {
+    console.log('error beach name', error);
+  }  
+  
+}); 
+
+
+
+router.get('/favorites', async (req, res) => {
+ try {
+   res.render('favorites')
+ } catch (error) {
+  console.log('We have an error', error)
+ }
+})
 
     
 

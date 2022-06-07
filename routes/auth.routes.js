@@ -32,7 +32,7 @@ return;
  const hashpass = await bcrypt.hashSync(password, salt);
  const authPass = {username, email, password:hashpass}   
      const newUser = await User.create(authPass);
-     res.redirect('/profile')
+     res.redirect('/login')
 } catch (error) {
     console.log('error creating a new user', error);
 }
@@ -45,7 +45,7 @@ router.get('/login', (req, res) => res.render('auth/login'));
 
 router.post('/login', async (req, res, next) => {
   const { username, email, password } = req.body;
-  console.log(req.body);
+ 
   console.log('SESSION =====> ', req.session);
 
 if (!email || !password) {

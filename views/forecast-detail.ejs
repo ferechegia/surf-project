@@ -1,3 +1,42 @@
+
+
+<div>
 <h1>
   <%=spotDetails.beach.spotName%> 
 </h1>
+</div>
+
+<div>
+  <p>
+    <%=spotDetails.beach.spotDescription%> 
+  </p>
+</div>
+
+<div>
+  <p>
+    Human Relation:
+    <%=spotDetails.humanRelation%> 
+  </p>
+</div>
+
+<div>
+  <p>
+    <%=spotDetails.max%> 
+    max
+  </p>
+</div>
+
+<div>
+  <p>
+    <%=spotDetails.min%> 
+    min
+  </p>
+</div>
+<div>
+  <form method="POST" action="/forecast-detail/<%=spotDetails.beach.spotId%>">
+    <button  type="submit">
+  </form>
+  
+Add to Favorites
+  </button>
+</div>
