@@ -73,6 +73,27 @@ res.render('favorites', {userFavorites})
 })
 
 
+
+
+
+router.post('/favorites/:spotName', async (req, res) => {
+  try {
+  const {spotName} = req.params;
+  console.log(req.session.currentUser._id)
+  const currentUserId = req.session.currentUser._id
+  
+    await User.updateOne({_id:currentUserId}, {$pull:{'favorites':spotName}} )
+    res.redirect('/favorites')
+  } catch (error) {
+    console.log('Error Deleting Surf Spot', error)
+  }
+})
+
+
+
+
+
+
 // router.get('/favorites/:id', async (req, res) => {
 //     const nameBeach = await favoriteBeach.spotName; 
 

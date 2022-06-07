@@ -1,3 +1,15 @@
 <h1>Favorite Surf Spots</h1> 
-<h2> <%= userFavorites[0]%> </h2>
-<h2> <%= userFavorites[1]%> </h2>
+
+
+    <ul class="timeline">
+        <% for (let i = 0; i < userFavorites.length; i++) { %>
+        <li>
+            <div>
+                <%= userFavorites[i] %>  
+                <form method="POST" action="/favorites/<%= userFavorites[i] %>">
+                    <button type="submit">Delete Favorite</button>
+                  </form>
+            </div>
+        </li>
+        <% } %>
+    </ul>
