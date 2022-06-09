@@ -1,26 +1,30 @@
 <div id="form">
-  <h2>Signup</h2>
-  <form action="/signup" method="POST">
-
-    <label> Username
-      <input type="text" name="username" placeholder="ironhacker" />
-    </label>
-
-    <label> Email
-      <input type="email" name="email" placeholder="rockstar@ironhack.com" />
-    </label>
-
-    <label> Password
-      <input type="password" name="password" placeholder="********" />
-    </label>
-
-    <button type="submit">Create account</button>
-
+  <h1>Signup</h1>
+  <div class="form">
+    <form action="/signup" method="POST">
+      <div class="label">
+      <label class="unserNameText"> Username
+        <input type="text" name="username" placeholder="ironhacker" />
+      </label>
+  
+      <label class="emailText"> Email
+        <input type="email" name="email" placeholder="rockstar@ironhack.com" />
+      </label>
+  
+      <label class="passwordText"> Password
+        <input type="password" name="password" placeholder="********" />
+      </label>
+  
+      <button type="submit">Sign Up</button>
+  
+  </div>
+  
     <% if (typeof errorMessage !== 'undefined') { %>
       <p><%= errorMessage %></p>
       <% } %>
-
+    </div>
   </form>
+</div>
 </div>
 
   

@@ -1,6 +1,10 @@
-<h1>Hello</h1>
 
+<div class="profileCard">
+    <div class="profileInfo">
+    <h1 class="helloSurfer">Hello Surfer!</h1>
 
-Profile <% if (typeof userInSession !== 'undefined') { %>
-    <p><%= userInSession.email %></p>
-    <% } %>
+    <p class="loggedInAs">Logged In as:</p> <% if (typeof userInSession !== 'undefined') { %>
+        <p class="emailProfileLog"><%= userInSession.email  %></p>
+        <% } %>
+    </div>
+</div>

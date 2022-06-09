@@ -1,17 +1,360 @@
-
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-a {
-  color: #00b7ff;
+
+
+body {
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('/images/heroImage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 1240px;
+}
+
+
+ul a {
+  color: #ffffff;
 }
 
 
 
 h1 {
-  color: 15px;
+  color: white;
+  margin: 12px;
+}
+
+h2 {
+  color: white;
+  margin: 12px;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 8px;
+}
+
+/* NAVBAR */
+
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(25px);
+  min-height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.menuList {
+  display: flex;
+  list-style: none;
+  
+  /* margin-bottom: 80px; */
+}
+
+li {
+  padding: 20px;
+}
+
+a {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 12px;
+  margin: 8px;
+  width: 160px;
+  border-radius: 10px;
+}
+
+a:hover {
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.24), 0 8px 40px 0 rgba(255, 255, 255, 0.2);
+}
+
+a .loginText {
+  color: white;
+}
+
+/* INDEX */
+
+#welcomeIndex {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  backdrop-filter: blur(12px);
+  height: 400px;
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 40px;
+  box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.2);
+}
+
+.auth{
+
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginText{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupText {
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
+
+/* SQUIRCLE
+background: paint(squircle);
+--squircle-smooth: 1;
+--squircle-radius: 40px;
+--squircle-fill: rgba(0, 0, 0, 0.2); */
+
+@media screen and (max-width: 769px) {
+  body{
+    background-color: #057F8B;
+  }
+  
+}
+
+
+/* LOGIN */
+
+#form {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+  backdrop-filter: blur(12px);
+  height: 400px;
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 40px;
+  box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.2);
+}
+
+.emailText {
+  color: white;
+}
+
+.passwordText {
+  color: white;
+}
+
+.unserNameText {
+  color: white;
+  padding: 8px;
+  
+}
+
+input {
+height: 24px;
+background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(4px);
+border-width: 0px;
+border-radius: 4px;
+color: white;
+margin-left: 12px;
+padding: 8px;
+}
+
+
+input:focus {
+  color: white;
+  background: rgba(255, 255, 255, 0.4);
+  outline-color: white;
+  outline-width: thin;
+}
+
+
+
+.label {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.emailText{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+}
+.passwordText{
+  padding: 8px;
+}
+
+button {
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  height: 40px;
+  border-width: 0px;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.2);
+}
+
+.buttonDelete {
+  background-color: red;
+}
+
+/* PROFILE */
+
+.profileCard{
+  backdrop-filter: blur(12px);
+  background-image: url('/images/profile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 88px;
+  height: 400px;
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 40px;
+  box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.2);
+}
+
+.profileInfo {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  padding: 40px;
+}
+
+.helloSurfer {
+  color: rgb(73, 73, 73);
+}
+
+.loggedInAs {
+  color: rgb(131, 131, 131);
+}
+
+.emailProfileLog{
+  color: rgb(73, 73, 73);
+}
+
+/* FAVORITES */
+
+.userFavorites {
+  color: white;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.userFavoritesDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.userFavoritesIndex {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.favoritesDiv {
+  margin: 40px;
+}
+
+
+
+/* footer */
+.footer{
+  background:#000;
+  padding:30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align:center;
+  }
+  
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.8em;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+.box {
+  backdrop-filter: blur(12px);
+}
+
+
+  .footer .row a:hover{
+  color:#fff;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+  
+  @media (max-width:720px){
+  .footer{
+  text-align:left;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
+  }

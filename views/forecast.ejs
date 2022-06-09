@@ -1,10 +1,62 @@
-<div>
-<h1>Forecast</h1>
-<div>
-  <% beachesResponse.forEach((spot) => { %>
-    <ul>
-      <li><a href="/forecast-detail/<%= spot.spotId %>"><%= spot.spotName %></a></li>
-    <% }) %> 
-    </ul>
-</div>
+
+<style>
+.container{
+margin:auto; 
+display: flex;
+align-items: center;
+flex-direction: column;
+text-align:center;
+
+}
+
+.box{
+padding: 100px; 
+margin:100px;   
+height: 100%;
+width: 800px;
+background-color: rgba(0, 0, 0, 0.6);
+border-radius: 80px;
+
+}
+
+
+
+
+@media only screen and ( max-width:768px ){	
+    .box{
+      margin:50px;
+      padding: 20px;
+      width:300px;
+      border-radius: 20px;
+    }
+  }
+
+.forecastList {
+  list-style: none;
+}
+.h1container{
+margin-top: 10px;  
+}
+.forcastH1{
+  font-size: 40px;
+  padding: 10px;
+  border-bottom:1px solid rgb(227, 226, 226);
+}
+
+</style>
+
+<section class="container">
+  <div class="box">
+  <div class="h1container"><h1 class="forcastH1">FORECAST</h1></div>
+    
+    <div>
+      <% beachesResponse.forEach((spot) => { %>
+        <ul class="forecastList">
+          <li><a href="/forecast-detail/<%= spot.spotId %>"><%= spot.spotName %></a></li>
+        <% }) %> 
+        </ul>
+    </div>
+</section>
+
+
 </div>

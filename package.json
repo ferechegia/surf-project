@@ -9,8 +9,10 @@
   "dependencies": {
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
+    "bootstrap": "^5.2.0-beta1",
     "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
+    "css-houdini-squircle": "^0.2.1",
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
